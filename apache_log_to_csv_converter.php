@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Convert Apache access log into a CSV file
  *
@@ -20,7 +19,6 @@ if (!$rh = fopen($input_file, 'r'))
 # Try to write out the header in the output file
 if (fwrite($wh, '"IP","Time","Request_Type","Path","Response","Referral_Domain","Referral_Path","User_Agent"'."\n") === FALSE)
 	close_and_exit("\n\nFATAL ERROR!\Cannot write to $output_file");
-
 
 /**
  * Replace 3-letter months with 2-digit months; to be used with preg_replace_callback
@@ -85,10 +83,8 @@ function close_and_exit( $message='' ) {
 	exit;
 }
 
-
 # Counter variables
 $i = $good = $bad = 0;
-
 
 /**
  * The main loop. If everything checks out, this loops through the input file line-by-line
@@ -150,6 +146,3 @@ Imported: $good
 -------------------------------
 
 " );
-
-
-?>
