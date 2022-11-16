@@ -1,6 +1,4 @@
- ======================================
- = Apache Access Log to CSV Converter =
- ======================================
+# Apache Access Log to CSV Converter
 
 Takes an Apache log of the form:
 
@@ -18,9 +16,7 @@ and converts it to:
 Note that this was developed for my logs, so if yours are in a different format
 you'll have to tweak the regular expressions. Hey, at least it's a start for you :)
 
- ================
- = INSTRUCTIONS =
- ================
+## Instructions
 
 Use it via command line as...
 `path/to/script.php relative/path/to/input_file relative/path/to/output_file.csv`
@@ -28,9 +24,8 @@ Use it via command line as...
 e.g.:
 `/bin/apache_log_to_csv_converter.php access_log access_log.csv`
 
- ===========
- = License =
- ===========
+## License
+
 Copyright (c) 2011 Matt Boynes <m@boyn.es>
 
 Permission is hereby granted, free of charge, to any person obtaining
