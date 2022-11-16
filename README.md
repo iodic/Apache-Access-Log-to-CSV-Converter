@@ -4,27 +4,29 @@
 
 Takes an Apache log of the form:
 
+```
 123.45.67.890 - - [23/Sep/2011:12:13:32 -0400] "GET / HTTP/1.1" 200 2279 "http://www.some-referrer.com/referral-page/" "Some User Agent 1.0.1"
+```
 
 and converts it to:
 
+```
 "IP","Time","Request_Type","Path","Response","Referral_Domain","Referral_Path","User_Agent"
 "123.45.67.890","2011-09-23 12:13:32","GET","/","200","http://www.some-referrer.com/","/referral-page/","Some User Agent 1.0.1"
+```
 
 Note that this was developed for my logs, so if yours are in a different format
 you'll have to tweak the regular expressions. Hey, at least it's a start for you :)
-
 
  ================
  = INSTRUCTIONS =
  ================
 
 Use it via command line as...
-path/to/script.php relative/path/to/input_file relative/path/to/output_file.csv
+`path/to/script.php relative/path/to/input_file relative/path/to/output_file.csv`
 
 e.g.:
-/bin/apache_log_to_csv_converter.php access_log access_log.csv
-
+`/bin/apache_log_to_csv_converter.php access_log access_log.csv`
 
  ===========
  = License =
